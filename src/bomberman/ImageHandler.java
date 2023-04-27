@@ -24,8 +24,11 @@ import bomberman.SoundHandler;
  */
 public class ImageHandler {
 
-    BufferedImage brick, box, boom, bomb1, bomb2;
-    BufferedImage manUp1, manUp2, manDown1, manDown2, manRight1, manRight2, manLeft1, manLeft2, manDead, buffer;
+    BufferedImage brick, box, boom, bomb1, bomb2, buffer;
+    BufferedImage[] man = new BufferedImage[9];
+    BufferedImage[] fireboy = new BufferedImage[9];
+    BufferedImage[] watergirl= new BufferedImage[9];
+    BufferedImage waterBoom, water, lava;
     BufferedImage bonus1, bonus2, bonus3, bonus4;
     int animCounter = 1;
     int animTimer = 0;
@@ -48,59 +51,96 @@ public class ImageHandler {
             boom = ImageIO.read(new File("fire.png"));
             bomb1 = ImageIO.read(new File("bomb1.png"));
             bomb2 = ImageIO.read(new File("bomb2.png"));
-            manUp1 = ImageIO.read(new File("manUp1.png"));
-            manUp2 = ImageIO.read(new File("manUp2.png"));
-            manDown1 = ImageIO.read(new File("manDown1.png"));
-            manDown2 = ImageIO.read(new File("manDown2.png"));
-            manLeft1 = ImageIO.read(new File("manLeft1.png"));
-            manLeft2 = ImageIO.read(new File("manLeft2.png"));
-            manRight1 = ImageIO.read(new File("manRight1.png"));
-            manRight2 = ImageIO.read(new File("manRight2.png"));
-            manDead = ImageIO.read(new File("manDead.png"));
+
+            man[0] = ImageIO.read(new File("manDead.png"));
+            man[1] = ImageIO.read(new File("manUp1.png"));
+            man[2] = ImageIO.read(new File("manUp2.png"));
+            man[3] = ImageIO.read(new File("manDown1.png"));
+            man[4] = ImageIO.read(new File("manDown2.png"));
+            man[5] = ImageIO.read(new File("manLeft1.png"));
+            man[6] = ImageIO.read(new File("manLeft2.png"));
+            man[7] = ImageIO.read(new File("manRight1.png"));
+            man[8] = ImageIO.read(new File("manRight2.png"));
+
             bonus1 = ImageIO.read(new File("bonus1.png"));
             bonus2 = ImageIO.read(new File("bonus2.png"));
             bonus3 = ImageIO.read(new File("bonus3.png"));
             bonus4 = ImageIO.read(new File("bonus4.png"));
 
+            fireboy[0] = ImageIO.read(new File("fireboyDead.png"));
+            fireboy[1] = ImageIO.read(new File("fireboyUp1.png"));
+            fireboy[2] = ImageIO.read(new File("fireboyUp2.png"));
+            fireboy[3] = ImageIO.read(new File("fireboyDown1.png"));
+            fireboy[4] = ImageIO.read(new File("fireboyDown2.png"));
+            fireboy[5] = ImageIO.read(new File("fireboyLeft1.png"));
+            fireboy[6] = ImageIO.read(new File("fireboyLeft2.png"));
+            fireboy[7] = ImageIO.read(new File("fireboyRight1.png"));
+            fireboy[8] = ImageIO.read(new File("fireboyRight2.png"));
 
+
+            watergirl[0] = ImageIO.read(new File("watergirlDead.png"));
+            watergirl[1] = ImageIO.read(new File("watergirlUp1.png"));
+            watergirl[2] = ImageIO.read(new File("watergirlUp2.png"));
+            watergirl[3] = ImageIO.read(new File("watergirlDown1.png"));
+            watergirl[4] = ImageIO.read(new File("watergirlDown2.png"));
+            watergirl[5] = ImageIO.read(new File("watergirlLeft1.png"));
+            watergirl[6] = ImageIO.read(new File("watergirlLeft2.png"));
+            watergirl[7] = ImageIO.read(new File("watergirlRight1.png"));
+            watergirl[8] = ImageIO.read(new File("watergirlRight2.png"));
+
+
+            waterBoom = ImageIO.read(new File("waterBoom.png"));
+            water = ImageIO.read(new File("water.png"));
+            lava = ImageIO.read(new File("lava.png"));
 
         } catch (IOException ex) {
             Logger.getLogger(GamePanel.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
 
     BufferedImage manImage(Bomberman bomberman) {
-        buffer = manDown1;
+        BufferedImage[] skin;
+
+        if (bomberman.playerType=="fireboy"){
+            skin = fireboy;
+        } else if (bomberman.playerType=="watergirl"){
+            skin = watergirl;
+        } else {
+            skin = man;
+        }
+        buffer = skin[3];
+
         if (bomberman.alive) {
             if (animCounter == 1) {
                 if (bomberman.mUp) {
-                    buffer = manUp1;
+                    buffer = skin[1];
                 }
                 if (bomberman.mDown) {
-                    buffer = manDown1;
-                }
-                if (bomberman.mRight) {
-                    buffer = manRight1;
+                    buffer = skin[3];
                 }
                 if (bomberman.mLeft) {
-                    buffer = manLeft1;
+                    buffer = skin[5];
+                }
+                if (bomberman.mRight) {
+                    buffer = skin[7];
                 }
             } else {
                 if (bomberman.mUp) {
-                    buffer = manUp2;
+                    buffer = skin[2];
                 }
                 if (bomberman.mDown) {
-                    buffer = manDown2;
-                }
-                if (bomberman.mRight) {
-                    buffer = manRight2;
+                    buffer = skin[4];
                 }
                 if (bomberman.mLeft) {
-                    buffer = manLeft2;
+                    buffer = skin[6];
+                }
+                if (bomberman.mRight) {
+                    buffer = skin[8];
                 }
             }
         } else {
-            buffer = manDead;
+            buffer = skin[0];
         }
         return buffer;
     }

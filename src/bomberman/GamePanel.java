@@ -25,8 +25,8 @@ import bomberman.SoundHandler;
 public class GamePanel extends javax.swing.JPanel {
     //// creating game objects
     GameHelper gameHelper = new GameHelper();
-    Bomberman player1 = new Bomberman(220, 300);
-    Bomberman player2 = new Bomberman(540, 300);
+    Bomberman player1 = new Bomberman(220, 300, "fireboy");
+    Bomberman player2 = new Bomberman(540, 300, "watergirl");
     GameField gameField = new GameField();
     ImageHandler imageHandler = new ImageHandler();
     SoundHandler soundHandler = new SoundHandler();

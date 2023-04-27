@@ -26,10 +26,12 @@ class Bomberman {
     boolean mUp;
     boolean mDown;
     boolean putBomb;
+    String playerType;
 
-    Bomberman(int a, int b) {
+    Bomberman(int a, int b, String pType) {
         x = a;
         y = b;
+        playerType = pType;
     }
 
     public void setPosition(int x, int y) {
