@@ -6,6 +6,7 @@ package bomberman;
 
 import javax.swing.JFrame;
 import bomberman.GamePanel;
+import javafx.scene.paint.Color;
 
 
 /**
@@ -21,10 +22,12 @@ public class Main {
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(1600, 1200);
-        GamePanel gamePanel = new GamePanel("level4.txt");
+        GamePanel gamePanel = new GamePanel("level1.txt");
         gamePanel.setVisible(true);
         f.add(gamePanel);
         f.setVisible(true);
+        f.setLocationRelativeTo(null);
         gamePanel.requestFocusInWindow();
+
     }
 }

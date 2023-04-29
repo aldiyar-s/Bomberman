@@ -4,9 +4,6 @@
  */
 package bomberman;
 
-import bomberman.Bomberman;
-import bomberman.GameField;
-
 /**
  *
  * @author Aldiyar
@@ -28,7 +25,7 @@ public class Bonus {
 
     void upgrade(Bomberman bomberman) {
         if (type == 1) {
-            bomberman.speed++;
+            bomberman.xSpeed++;
         }
         if (type == 2) {
             bomberman.bombsAllowed++;

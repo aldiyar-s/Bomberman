@@ -21,7 +21,7 @@ import javax.sound.midi.Synthesizer;
  */
 public class SoundHandler {
 
-    Sequencer s;
+    Sequencer s, l, w;
     Synthesizer synth;
 
     public void load() {
@@ -31,7 +31,14 @@ public class SoundHandler {
             synth.open();
             s = MidiSystem.getSequencer();
             s.open();
-            s.setSequence(MidiSystem.getSequence(new File("town.mid")));
+            s.setSequence(MidiSystem.getSequence(new File("underground2.mid")));
+            l = MidiSystem.getSequencer();
+            l.open();
+            l.setSequence(MidiSystem.getSequence(new File("death.mid")));
+            w = MidiSystem.getSequencer();
+            w.open();
+            w.setSequence(MidiSystem.getSequence(new File("level-complete.mid")));
+
 
 
         } catch (InvalidMidiDataException ex) {
@@ -47,7 +54,7 @@ public class SoundHandler {
         try {
             MidiChannel[] channels = synth.getChannels();
             channels[9].allNotesOff();
-            channels[9].noteOn(34, 100);
+            channels[9].noteOn(34, 100); //34
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -57,7 +64,20 @@ public class SoundHandler {
         try {
             MidiChannel[] channels = synth.getChannels();
             channels[9].allNotesOff();
-            channels[9].noteOn(45, 100);
+            channels[9].noteOn(45, 100); //45
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void win() {
+        try {
+            MidiChannel[] channels = synth.getChannels();
+            channels[9].allNotesOff();
+            channels[9].noteOn(53, 100);
+            w.setLoopCount(0);
+            w.start();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,6 +89,8 @@ public class SoundHandler {
             MidiChannel[] channels = synth.getChannels();
             channels[9].allNotesOff();
             channels[9].noteOn(30, 100);
+            l.setLoopCount(0);
+            l.start();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -79,7 +101,9 @@ public class SoundHandler {
         s.setLoopCount(0);
         s.start();
     }
+
     public void songStop() {
         s.stop();
+        l.stop();
     }
 }

@@ -12,12 +12,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import bomberman.GameHelper;
-import bomberman.Bomberman;
-import bomberman.GameField;
-import bomberman.GamePanel;
-import bomberman.SoundHandler;
-
 /**
  *
  * @author Aldiyar
@@ -28,7 +22,7 @@ public class ImageHandler {
     BufferedImage[] man = new BufferedImage[9];
     BufferedImage[] fireboy = new BufferedImage[9];
     BufferedImage[] watergirl= new BufferedImage[9];
-    BufferedImage waterBoom, water, lava;
+    BufferedImage waterBoom, water, lava, iron, trigger1, trigger2, lvlexit;
     BufferedImage bonus1, bonus2, bonus3, bonus4;
     int animCounter = 1;
     int animTimer = 0;
@@ -92,7 +86,10 @@ public class ImageHandler {
             waterBoom = ImageIO.read(new File("waterBoom.png"));
             water = ImageIO.read(new File("water.png"));
             lava = ImageIO.read(new File("lava.png"));
-
+            iron = ImageIO.read(new File("iron.png"));
+            trigger1 = ImageIO.read(new File("trigger1.png"));
+            trigger2 = ImageIO.read(new File("trigger2.png"));
+            lvlexit = ImageIO.read(new File("exit.png"));
         } catch (IOException ex) {
             Logger.getLogger(GamePanel.class.getName()).log(Level.SEVERE, null, ex);
             ex.printStackTrace();
@@ -145,6 +142,10 @@ public class ImageHandler {
         return buffer;
     }
 
+    BufferedImage switchImage (Switch switch1) {
+        return (switch1.open?trigger1:trigger2);
+    }
+
     BufferedImage redrawLevel(GameField gameField) {
 
         level = new BufferedImage(800, 600, BufferedImage.TYPE_INT_RGB);
@@ -167,18 +168,37 @@ public class ImageHandler {
                 if (gameField.field[i][j] == 4) {
                     gg.drawImage(boom, i * 40, j * 40, null);
                 }
+                if (gameField.field[i][j] == 5) {
+                    gg.drawImage(lava, i * 40, j * 40, null);
+                }
+                if (gameField.field[i][j] == 6) {
+                    gg.drawImage(water, i * 40, j * 40, null);
+                }
+                if (gameField.field[i][j] == 9) {
+                    gg.drawImage(iron, i * 40, j * 40, null);
+                }
+                if (gameField.field[i][j] == -2) {
+
+                }
+                if (gameField.field[i][j] == -3) {
+
+                }
+                if (gameField.field[i][j] == -9) {
+                    gg.drawImage(lvlexit, i * 40, j * 40, null);
+                }
+
                 if (gameField.bonusField[i][j] != null) {
                     gg.drawImage(bonusImage(gameField.bonusField[i][j]), i * 40, j * 40, null);
                 }
             }
         }
         gg.setColor(Color.WHITE);
-        gg.drawImage(bonus4, 0, 559, null);
-        gg.drawImage(bonus4, 760, 559, null);
-        gg.drawImage(bonus1, 40, 560, null);
-        gg.drawImage(bonus1, 720, 560, null);
-        gg.drawImage(bonus3, 80, 560, null);
-        gg.drawImage(bonus3, 680, 560, null);
+//        gg.drawImage(bonus4, 0, 559, null);
+//        gg.drawImage(bonus4, 760, 559, null);
+//        gg.drawImage(bonus1, 40, 560, null);
+//        gg.drawImage(bonus1, 720, 560, null);
+//        gg.drawImage(bonus3, 80, 560, null);
+//        gg.drawImage(bonus3, 680, 560, null);
 
         return level;
     }

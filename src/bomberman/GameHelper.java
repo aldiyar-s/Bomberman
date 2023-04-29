@@ -7,17 +7,13 @@ package bomberman;
 import java.util.HashSet;
 import java.util.Set;
 
-import bomberman.Bomberman;
-import bomberman.GameField;
-import bomberman.ImageHandler;
-import bomberman.SoundHandler;
-import bomberman.Bomb;
 /**
  *
  * @author Aldiyar
  */
 class GameHelper {
     Set<Bomb> bombs = new HashSet<Bomb>();
+
     public void kill(Bomberman bomberman) {
         bomberman.alive = false;
         resetPlayer(bomberman);
@@ -51,16 +47,17 @@ class GameHelper {
         }
         bombs.removeAll(removed);
     }
-    public void restartGame(GameField gameField, Bomberman player1, Bomberman player2, String fname) {
-        gameField.loadLevel(fname, player1, player2);
+    public void restartGame(GameField gameField, Bomberman player1, Bomberman player2, String fname, Switch switch1, Switch switch2) {
+        gameField.loadLevel(fname, player1, player2, switch1, switch2);
         player1.alive = true;
         player2.alive = true;
         resetPlayer(player1);
         resetPlayer(player2);
+
     }
     public void resetPlayer (Bomberman bomberman) {
         bomberman.bombsAllowed = 1;
-        bomberman.speed = 2;
+        bomberman.xSpeed = 3;
         bomberman.power = 2;
     }
 }
