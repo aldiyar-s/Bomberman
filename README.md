@@ -20,3 +20,5 @@ https://www.youtube.com/watch?v=b60Fl2WLaQY
 Should work now. Default build method is Java JDK 8 with Main.java being the main file.
 
 NOTE: Sounds did not work when tested on Mac. I used Windows 10 PC and IntelliJ Idea for development - works well there.
+
+![image](https://user-images.githubusercontent.com/46633793/235327157-b00eb6dc-487f-425d-b823-f85f6a7e82b4.png)
