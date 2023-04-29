@@ -21,7 +21,7 @@ public class Main {
         // TODO code application logic here
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setSize(1600, 1200);
+        f.setSize(800, 600);
         GamePanel gamePanel = new GamePanel("level1.txt");
         gamePanel.setVisible(true);
         f.add(gamePanel);

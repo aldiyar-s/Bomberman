@@ -4,50 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57790fe9-c4ad-4477-87a6-824961ab7bfe" name="Changes" comment="Fireboy and Watergirl update">
-      <change afterPath="$PROJECT_DIR$/src/bomberman/Gate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bomberman/PauseDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bomberman/Switch.java" afterDir="false" />
+    <list default="true" id="57790fe9-c4ad-4477-87a6-824961ab7bfe" name="Changes" comment="Fireboy and Watergirl update final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fire.png" beforeDir="false" afterPath="$PROJECT_DIR$/fire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyDown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyDown1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyDown2.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyDown2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyLeft1.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyLeft1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyLeft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyLeft2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyRight1.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyRight1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fireboyRight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/fireboyRight2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/level1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/level2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/level3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/level5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/level6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Bomberman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Bomberman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Bonus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Bonus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GameField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GameField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GameHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GameHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/ImageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/ImageHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/box.png" beforeDir="false" afterPath="$PROJECT_DIR$/box.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/brick.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Bomberman/bomberman/SoundHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bomberman/bomberman/SoundHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/Bomberman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/Bomberman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/Bonus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/Bonus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/GameField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/GameField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/GameHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/GameHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/ImageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/ImageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bomberman/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bomberman/SoundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bomberman/SoundHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/town.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlDown1.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlDown1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlDown2.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlDown2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlLeft1.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlLeft1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlLeft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlLeft2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlRight1.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlRight1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/watergirlRight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/watergirlRight2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682622475293</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fireboy and Watergirl update final">
+      <created>1682799967734</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682799967734</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fireboy and Watergirl update final">
+      <created>1682800616427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682800616427</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fireboy and Watergirl update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fireboy and Watergirl update" />
+    <MESSAGE value="Fireboy and Watergirl update final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fireboy and Watergirl update final" />
   </component>
 </project>
